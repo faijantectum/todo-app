@@ -6,7 +6,7 @@ import Todolist from "./components/Todolist";
 function App() {
   const [listTodo, setListTodo] = useState([]);
   let addList = (inputText) => {
-    setListTodo([...listTodo, inputText]);
+    if (inputText !== "") setListTodo([...listTodo, inputText]);
   };
 
   const deleteListItem = (key) => {
@@ -21,7 +21,7 @@ function App() {
 
         {listTodo.map((listItem, i, key) => (
           <Todolist
-            key={key}
+            key={i}
             index={i}
             item={listItem}
             deleteItem={deleteListItem}
