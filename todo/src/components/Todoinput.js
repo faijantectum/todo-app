@@ -4,8 +4,9 @@ function Todoinput(props) {
   const [inputText, setInputText] = useState("");
   return (
     <div>
-      Name :
+      Task :
       <input
+        style={{ margin: "5px" }}
         type="text"
         placeholder="Enter your name"
         className="input"
@@ -15,6 +16,7 @@ function Todoinput(props) {
         }}
       />
       <button
+        style={{ margin: "5px" }}
         onClick={() => {
           props.addList(inputText);
           setInputText("");
