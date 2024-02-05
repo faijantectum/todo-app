@@ -4,7 +4,13 @@ const Todolist = (props) => {
   return (
     <li className="list">
       {props.item}
-      <button>Remove</button>
+      <button
+        onClick={() => {
+          props.deleteItem(props.index);
+        }}
+      >
+        Remove
+      </button>
     </li>
   );
 };
