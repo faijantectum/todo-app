@@ -4,7 +4,7 @@ const Todolist = (props) => {
   return (
     <li className="list">
       {props.item}
-      <button>Delete</button>
+      <button>Remove</button>
     </li>
   );
 };
